@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ETF TW Stock Ratio</title>
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
+  <style>
+    body {
+      margin: 24px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #202124;
+      background: #f8fafc;
+    }
+    main {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin: 0 0 18px;
+      font-size: 24px;
+      font-weight: 650;
+    }
+    table.dataTable {
+      width: 100% !important;
+      background: #ffffff;
+      font-size: 14px;
+    }
+    table.dataTable th,
+    table.dataTable td {
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>ETF TW Stock Ratio</h1>
+    <table border="1" class="dataframe display compact" id="etf-tw-stock-ratio-table">
+  <thead>
+    <tr style="text-align: right;">
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+  <script>
+  $(document).ready(function () {
+    $('#etf-tw-stock-ratio-table').DataTable({
+      pageLength: 50,
+      lengthMenu: [10, 25, 50, 100],
+      searching: true,
+      ordering: true,
+      scrollX: true
+    });
+  });
+  </script>
+</body>
+</html>
